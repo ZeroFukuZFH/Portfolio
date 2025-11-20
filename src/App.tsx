@@ -1,13 +1,25 @@
 import Home from "./Pages/Home/Main"
-import { BrowserRouter as Router } from "react-router-dom" 
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const mainTheme = createTheme({
+  palette: {
+    primary: {
+      main: '#FF0000',
+      light: '#4B4E53',
+      dark: '#1D1E27',
+      contrastText:'#EDF2F4'
+    }
+  }
+})
+
 function App() {
+  
   return (
-    <>
-      <Router>
-        <Home/>
-      </Router>
-    </>
-  )
+    <ThemeProvider theme={mainTheme}>
+      <Home/>
+    </ThemeProvider>
+  );
 }
+
 
 export default App
