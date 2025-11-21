@@ -2,34 +2,46 @@ import Projects from "./Sections/Projects/Projects";
 import Introduction from "./Sections/Introduction/Introduction";
 import Socials from "./Sections/Socials/Socials";
 import Services from "./Sections/Services/Services";
-import { useEffect, useState } from "react";
+import { useEffect,} from "react";
+import './main.css'
 
-const useScrollPosition = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []); 
-
-  return scrollPosition;
-};
-
+const intersection = () => { // animation 
+  const cards = document.querySelectorAll('.element')
+  const observer = new IntersectionObserver((entries)=>{
+    console.log('new')
+    entries.forEach(element => {
+      element.target.classList.toggle('show',element.isIntersecting)
+    },{
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+    });
+  })
+  cards.forEach((card) => {
+    observer.observe(card)
+  })
+}
 
 function Home(){
-  const pos:number = useScrollPosition();
+  
+  useEffect(()=>{
+    console.log('component has re-rendered - intersection')
+    intersection()
+  },[])
 
-    // hoist each page y location then if scroll > end || scroll < start then show
   return (
     <>
-      <Introduction />
-      <Projects />
-      <Services />
-      <Socials />
+      <section className="element">
+        <Introduction />
+      </section>
+      <section className="element">
+        <Projects />
+      </section>
+      <section className="element">
+        <Services />
+      </section>
+      <section className="element">
+        <Socials />
+      </section>
     </>
   )
 }

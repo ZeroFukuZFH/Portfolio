@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material"
 function Socials(){
     return (
         <>
-            <section >
+            
                 <Box sx={{
                     backgroundColor:'primary.dark',
                     color:'primary.contrastText',
@@ -16,7 +16,7 @@ function Socials(){
                     
                     <Typography> SOCIALS </Typography>
                 </Box>
-            </section>
+            
         </>
     )
 }

@@ -40,7 +40,7 @@ function Body(){
 function Services(){
     return(
         <>
-        <section >
+        
             <Box sx={{
                 backgroundColor:'primary.contrastText',
                 width:'100vw',
@@ -54,7 +54,7 @@ function Services(){
                 
                 <Body/>
             </Box>
-        </section>
+        
         </>
     )
 }

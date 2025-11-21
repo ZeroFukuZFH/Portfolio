@@ -1,0 +1,16 @@
+.element {
+    opacity: 0;
+}
+
+.element.show {
+    animation-name: myAnimation;
+    animation-duration: 2s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes myAnimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+

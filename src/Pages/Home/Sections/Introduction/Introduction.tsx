@@ -6,7 +6,7 @@ import AppBar from "./Components/AppBar"
 function Introduction(){
     return (
         <>
-        <section>
+        
             
             <AppBar/>
             <Box sx={{
@@ -26,7 +26,7 @@ function Introduction(){
                 <Body/>
                 
             </Box>
-        </section>
+        
         </>
     )
 }
