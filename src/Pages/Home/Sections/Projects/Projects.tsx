@@ -40,7 +40,7 @@ function Body(){
 function Projects(){
     return(
         <>
-        <section>
+        <section >
             <Box sx={{
                 backgroundColor:'primary.main',
                 color:'primary.contrastText',
@@ -49,6 +49,7 @@ function Projects(){
                 justifyContent:'space-evenly',
                 alignItems:'center'
             }}>
+                
                 <img src="https://placehold.co/400" alt="nigger"/>
                 <Body/>
             </Box>

@@ -7,6 +7,7 @@ function Introduction(){
     return (
         <>
         <section>
+            
             <AppBar/>
             <Box sx={{
                 display:'flex',
@@ -20,6 +21,7 @@ function Introduction(){
                 textAlign:'center',
                 color:'primary.contrastText'
             }}>    
+            
                 <Title/>
                 <Body/>
                 
